@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe </title>
+        <style>
+            .tic{
+                width: 300px;
+                height: 300px;
+                border-spacing: 0px;
+            }
+
+            .tic td,
+            .tic tr{
+                width: 33.3%;
+                height: 33.3%
+            }
+            .tic td{
+                text-align: center;
+                font-size: 4em;
+                border: 1px solid black;
+            }
+            
+            #one{
+                border-top: none;
+                border-left: none;
+            }
+
+            #two{
+                border-top: none;
+            }
+
+            #three{
+                border-top: none;
+                border-right: none;
+            }
+
+            #four{
+                border-left: none;
+            }
+
+            #six{
+                border-right: none;
+            }
+
+            #seven{
+                border-left: none;
+                border-bottom: none;
+            }
+
+            #eight{
+                border-bottom: none;
+            }
+
+            #nine{
+                border-bottom: none;
+                border-right: none;
+            }
+
+           
+
+
+        </style>
+        <script defer>
+            const board = document.querySelector('.tic');
+            const resetButton = document.querySelector('#reset');
+            const player1 = "X";
+            const player2 = "O";
+            let player = true;
+            const draw = (cell) => {
+                console.log(cell.target);
+                if (player) {
+                    cell.target.innerHTML = player;
+                    player = !player
+                } else{
+                    cell.target.innerHTML = player;
+                    player = !player
+                }              
+            }
+        
+        </script>
+    </head>
+
+    <body>
+        <table class="tic">
+                <tr>
+                    <td id="one"></td>
+                    <td id="two"></td>
+                    <td id="three"></td>
+                </tr>
+
+                <tr>
+                    <td id="four"></td>
+                    <td id="five"></td>
+                    <td id="six"></td>
+                </tr>
+
+                <tr>
+                    <td id="seven"></td>
+                    <td id="eight"></td>
+                    <td id="nine"></td>
+                </tr>
+
+        </table>
+
+        <button id="reset">Reset Meh!</button>
+    </body>
+    
+</html>
